@@ -44,9 +44,11 @@ const toggleMode = ()=>{
         <section id="textform">
         <TextForm heading="Enter the text below for analyzing" mode={mode} showAlert={showAlert}/>
         </section>
+        <hr></hr>
         <section id="about">
         <About mode={mode}/>
-        </section>  
+        </section>
+        <hr></hr>  
         <Footer />
       </div>    
     </>
