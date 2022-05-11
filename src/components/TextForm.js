@@ -164,11 +164,11 @@ export default function TextForm(props) {
          </tr>
          <tr>
            <td>Number of Sentences</td>
-           <td>{text.split(/[.?]+/).length}</td>
+           <td>{text.split(/[.?]+/).filter((element)=>{return element.length !==0}).length}</td>
          </tr>
          <tr>
            <td>Reading Time</td>
-           <td>{0.08 * text.split(" ").length}</td>
+           <td>{0.08 * text.split(" ").filter((element)=>{return element.length !==0}).length} Minutes</td>
          </tr>
        </tbody>
       </table>
