@@ -133,16 +133,16 @@ export default function TextForm(props) {
           style={{color: props.mode==='light'?'black':'white', backgroundColor: props.mode==='light'?'white':'#212529', border:props.mode==='light'?'2px solid black':'2px solid white'}}
         ></textarea>
       </div>
-      <button className={`btn btn-${props.mode==='light'?'primary':'secondary'} ${text.length===0?'disabled':''} mx-2 my-2`} onClick={handleUpButton}>Upper Case</button>
-      <button className={`btn btn-${props.mode==='light'?'primary':'secondary'} ${text.length===0?'disabled':''} mx-2 my-2`} onClick={handleLoButton}>Lower Case</button>
-      <button className={`btn btn-${props.mode==='light'?'primary':'secondary'} ${text.length===0?'disabled':''} mx-2 my-2`} onClick={handleTiCButton}>Title Case</button>
-      <button className={`btn btn-${props.mode==='light'?'primary':'secondary'} ${text.length===0?'disabled':''} mx-2 my-2`} onClick={handleSeCButton}>Sentence Case</button>
-      <button className={`btn btn-${props.mode==='light'?'primary':'secondary'} ${text.length===0?'disabled':''} mx-2 my-2`} onClick={handleRemCharButton}>Remove Extra Spaces</button>
-      <button className={`btn btn-${props.mode==='light'?'primary':'secondary'} ${text.length===0?'disabled':''} mx-2 my-2`} onClick={handleClearButton}>Clear Text</button>
-      <button className={`btn btn-${props.mode==='light'?'primary':'secondary'} ${text.length===0?'disabled':''} mx-2 my-2`} onClick={handleCopyButton}>Copy</button>
-      <button className={`btn btn-${props.mode==='light'?'primary':'secondary'} ${text.length===0?'disabled':''} mx-2 my-2`} onClick={handleSaveButton}>Save</button>
-      <button className={`btn btn-${props.mode==='light'?'primary':'secondary'} ${text.length===0?'disabled':''} mx-2 my-2`} onClick={handleUndoButton}>Undo</button>
-      <button className={`btn btn-${props.mode==='light'?'primary':'secondary'} ${text.length===0?'disabled':''} mx-2 my-2`} onClick={handleRedoButton}>Redo</button>
+      <button className={`btn btn-${props.mode==='light'?'primary':'secondary'} ${text.split(" ").filter((element)=>{return element.length !==0}).length===0?'disabled':''} mx-2 my-2`} onClick={handleUpButton}>Upper Case</button>
+      <button className={`btn btn-${props.mode==='light'?'primary':'secondary'} ${text.split(" ").filter((element)=>{return element.length !==0}).length ===0?'disabled':''} mx-2 my-2`} onClick={handleLoButton}>Lower Case</button>
+      <button className={`btn btn-${props.mode==='light'?'primary':'secondary'} ${text.split(" ").filter((element)=>{return element.length !==0}).length===0?'disabled':''} mx-2 my-2`} onClick={handleTiCButton}>Title Case</button>
+      <button className={`btn btn-${props.mode==='light'?'primary':'secondary'} ${text.split(" ").filter((element)=>{return element.length !==0}).length===0?'disabled':''} mx-2 my-2`} onClick={handleSeCButton}>Sentence Case</button>
+      <button className={`btn btn-${props.mode==='light'?'primary':'secondary'} ${text.split(" ").filter((element)=>{return element.length !==0}).length===0?'disabled':''} mx-2 my-2`} onClick={handleRemCharButton}>Remove Extra Spaces</button>
+      <button className={`btn btn-${props.mode==='light'?'primary':'secondary'} ${text.split(" ").filter((element)=>{return element.length !==0}).length===0?'disabled':''} mx-2 my-2`} onClick={handleClearButton}>Clear Text</button>
+      <button className={`btn btn-${props.mode==='light'?'primary':'secondary'} ${text.split(" ").filter((element)=>{return element.length !==0}).length===0?'disabled':''} mx-2 my-2`} onClick={handleCopyButton}>Copy</button>
+      <button className={`btn btn-${props.mode==='light'?'primary':'secondary'} ${text.split(" ").filter((element)=>{return element.length !==0}).length===0?'disabled':''} mx-2 my-2`} onClick={handleSaveButton}>Save</button>
+      <button className={`btn btn-${props.mode==='light'?'primary':'secondary'} ${text.split(" ").filter((element)=>{return element.length !==0}).length===0?'disabled':''} mx-2 my-2`} onClick={handleUndoButton}>Undo</button>
+      <button className={`btn btn-${props.mode==='light'?'primary':'secondary'} ${text.split(" ").filter((element)=>{return element.length !==0}).length===0?'disabled':''} mx-2 my-2`} onClick={handleRedoButton}>Redo</button>
     </div>
     <hr></hr>
     <div className="container my-3" style={{color: props.mode==='light'?'black':'white'}}>
