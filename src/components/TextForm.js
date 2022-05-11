@@ -156,7 +156,7 @@ export default function TextForm(props) {
        <tbody>
          <tr>
            <td>Number of Words</td>
-           <td>{text.split(" ").length}</td>
+           <td>{text.split(" ").filter((element)=>{return element.length !==0}).length}</td>
          </tr>
          <tr>
            <td>Number of Characters</td>
